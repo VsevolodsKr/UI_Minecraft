@@ -11,8 +11,9 @@ public class AtteluMainisana : MonoBehaviour{
     public GameObject armor;
     public GameObject trousers;
     public GameObject shoes;
-    public GameObject fons1;
-    public GameObject fons2;
+    public Sprite fons1;
+    public Sprite fons2;
+	public GameObject fonaMaina;
     public void izkritosais(int index){
         if (index == 0){
             mainigaisAttels.GetComponent<Image>().sprite = atteluMasivs[0];
@@ -39,7 +40,10 @@ public class AtteluMainisana : MonoBehaviour{
     public void ShoesAttels(bool vertiba){
         shoes.SetActive(vertiba);
     }
-    public void FonaMaina() { 
-         
+    public void diena() { 
+		fonaMaina.GetComponent<Image> ().sprite = fons1;
    }
+	public void nakts() { 
+		fonaMaina.GetComponent<Image> ().sprite = fons2;
+	}
 }
