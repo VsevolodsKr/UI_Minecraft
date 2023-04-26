@@ -9,5 +9,5 @@ Projekts - Spēle, kurš realizē pārģērbšanas ideju Minecraft spēlē 🧺<
 - [x] Izveidot iespēju mainīt varoni (vismāz 2)
 - [ ] Pārvietojot objektus (apģerbu), izveidot iespēju, ka lietotājs var mainīt tam krāsu, uzbraucot uz kāda no krāsas spainim
 - [ ] izveidot iespēju mainīt varoņa augstumu un platumu, un tās automātiski mainās apgērba izmērs
-- [ ] Izveidot nelielu aprakstu par katru no varoņiem
+- [x] Izveidot nelielu aprakstu par katru no varoņiem
 - [ ] izveidot otro ainu (sākuma ekrāns)
