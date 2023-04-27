@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class ObjektuParvietosana : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler {
 	private RectTransform transformacijuLogs;
 	public Canvas kanva;
+	Transform parentAfterDrag;
 	public void Awake() {
 		transformacijuLogs = GetComponent<RectTransform>();
 	}
@@ -18,8 +19,12 @@ public class ObjektuParvietosana : MonoBehaviour, IPointerDownHandler, IDragHand
 	}
 	public void OnBeginDrag(PointerEventData notikums){
 		Debug.Log("Uzsākta objekta pārvietošana!");
+		parentAfterDrag = transform.parent;
+		transform.SetParent(transform.root);
+		transform.SetAsLastSibling();
 	}
 	public void OnEndDrag(PointerEventData notikums){
 		Debug.Log("Pabeigta objekta pārvietošana!");
+		transform.SetParent(parentAfterDrag);
 	}
 }
