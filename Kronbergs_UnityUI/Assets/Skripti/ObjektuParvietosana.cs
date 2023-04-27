@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ObjektuParvietosana : MonoBehaviour, IDragHandler{
-	private RectTransform transformacijasLogs;
+public class ObjektuParvietosana : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler {
+	private RectTransform transformacijuLogs;
 	public Canvas kanva;
-	private void Awake(){
-		transformacijasLogs = GetComponent<RectTransform> ();
+	public void Awake() {
+		transformacijuLogs = GetComponent<RectTransform>();
+	}
+	public void OnPointerDown(PointerEventData notikums) {
+		Debug.Log("Kreisais klikšķis uz pārvietojamā objekta!");
 	}
 	public void OnDrag(PointerEventData notikums){
-		Vector2 mousePosition = new Vector2 (Input.mousePosition.x, Input.mousePosition.y);
-		mousePosition.x = Mathf.Clamp(mousePosition.x, 0+transformacijasLogs.rect.width / 2, Screen.width - transformacijasLogs.rect.width / 2);
-		mousePosition.y = Mathf.Clamp(mousePosition.y, 0+transformacijasLogs.rect.height / 2, Screen.height - transformacijasLogs.rect.height / 2);
-		transform.position = mousePosition;
+		Debug.Log("Objekts tiek pārvietots!");
+		transformacijuLogs.anchoredPosition += notikums.delta / kanva.scaleFactor;
+	}
+	public void OnBeginDrag(PointerEventData notikums){
+		Debug.Log("Uzsākta objekta pārvietošana!");
+	}
+	public void OnEndDrag(PointerEventData notikums){
+		Debug.Log("Pabeigta objekta pārvietošana!");
 	}
 }
