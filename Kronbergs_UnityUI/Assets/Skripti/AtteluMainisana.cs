@@ -14,6 +14,16 @@ public class AtteluMainisana : MonoBehaviour{
     public Sprite fons1;
     public Sprite fons2;
 	public GameObject fonaMaina;
+    public Slider slideraIzmers1;
+    public Slider slideraIzmers2;
+    private RectTransform imageRectTransform, helmetTransform, armorTransform, trousersTransform, shoesTransform;
+    void Start(){
+        imageRectTransform = mainigaisAttels.GetComponent<RectTransform>();
+        helmetTransform = helmet.GetComponent<RectTransform>();
+        armorTransform = armor.GetComponent<RectTransform>();
+        trousersTransform = trousers.GetComponent<RectTransform>();
+        shoesTransform = shoes.GetComponent<RectTransform>();
+    }
     public void izkritosais(int index){
         if (index == 0){
             mainigaisAttels.GetComponent<Image>().sprite = atteluMasivs[0];
@@ -46,4 +56,19 @@ public class AtteluMainisana : MonoBehaviour{
 	public void nakts() { 
 		fonaMaina.GetComponent<Image> ().sprite = fons2;
 	}
+    public void mainitGarumu(){
+        float pasreizejaisIzmers = slideraIzmers1.GetComponent<Slider>().value;
+        mainigaisAttels.transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
+        helmet.transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
+        armor.transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
+        trousers.transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
+        shoes.transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
+    }
+    public void mainitPlatumu(){
+        imageRectTransform.sizeDelta = new Vector2(slideraIzmers2.value, imageRectTransform.sizeDelta.y);
+        helmetTransform.sizeDelta = new Vector2(slideraIzmers2.value, helmetTransform.sizeDelta.y);
+        armorTransform.sizeDelta = new Vector2(slideraIzmers2.value, armorTransform.sizeDelta.y);
+        trousersTransform.sizeDelta = new Vector2(slideraIzmers2.value, trousersTransform.sizeDelta.y);
+        shoesTransform.sizeDelta = new Vector2(slideraIzmers2.value, shoesTransform.sizeDelta.y);
+    }
 }
