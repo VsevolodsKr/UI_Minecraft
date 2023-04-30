@@ -20,6 +20,10 @@ public class AtteluMainisana : MonoBehaviour{
     private RectTransform imageRectTransform;
 	private RectTransform[] helmetTransform = null, armorTransform = null, trousersTransform = null, shoesTransform = null;
     void Start(){
+		helmetTransform = new RectTransform[helmets.Length];
+		armorTransform = new RectTransform[armors.Length];
+		trousersTransform = new RectTransform[trousers.Length];
+		shoesTransform = new RectTransform[shoes.Length];
         imageRectTransform = mainigaisAttels.GetComponent<RectTransform>();
 		for(int i = 0; i < armors.Length; i++) {
 			armorTransform[i] = armors[i].GetComponent<RectTransform> ();
