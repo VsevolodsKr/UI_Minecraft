@@ -5,68 +5,82 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ObjektuParvietosana : MonoBehaviour {
+	Transform parentAfterDrag;
     public Slider slideris1, slideris2;
-	public GameObject cepure, prieksauts, bikses, zabaki, cepureVieta, prieksautsVieta, biksesVieta, zabakiVieta;
-	Vector2 cepureInitialPos, prieksautsInitialPos, biksesInitialPos, zabakiInitialPos;
-    private float distancija, platums;
+	public GameObject cepureVieta, prieksautsVieta, biksesVieta, zabakiVieta;
+	public GameObject[]  cepure, prieksauts, bikses, zabaki;
+	Vector3[] cepureInitialPos = null, prieksautsInitialPos = null, biksesInitialPos = null, zabakiInitialPos = null;
+    private float distancijaCepure, distancijaPrieksauts, distancijaBikses, distancijaZabaki, platums;
 	void Start() {
-        cepureInitialPos = cepure.transform.position;
-        prieksautsInitialPos = prieksauts.transform.position;
-        biksesInitialPos = bikses.transform.position;
-        zabakiInitialPos = zabaki.transform.position;
+		cepureInitialPos = new Vector3[cepure.Length];
+		prieksautsInitialPos = new Vector3[prieksauts.Length];
+		biksesInitialPos = new Vector3[bikses.Length];
+		zabakiInitialPos = new Vector3[zabaki.Length];
+		for (int i = 0; i < cepure.Length; i++) {
+			cepureInitialPos[i] = cepure[i].transform.position;
+		}
+		for (int i = 0; i < prieksauts.Length; i++) {
+			prieksautsInitialPos[i] = prieksauts[i].transform.position;
+		}
+		for (int i = 0; i < bikses.Length; i++) {
+			biksesInitialPos[i] = bikses[i].transform.position;
+		}
+		for (int i = 0; i < zabaki.Length; i++) {
+			zabakiInitialPos[i] = zabaki[i].transform.position;
+		}
     }
-	public void kustinatCepure() {
-		cepure.transform.position = Input.mousePosition;
+	public void dragCepure(int index) {
+		cepure[index].transform.position = Input.mousePosition;
     }
-    public void kustinatPrieksauts(){
-        prieksauts.transform.position = Input.mousePosition;
+	public void dragPrieksauts(int index){
+		prieksauts[index].transform.position = Input.mousePosition;
     }
-    public void kustinatBikses(){
-        bikses.transform.position = Input.mousePosition;
+	public void dragBikses(int index){
+		bikses[index].transform.position = Input.mousePosition;
     }
-    public void kustinatZabaki(){
-        zabaki.transform.position = Input.mousePosition;
+	public void dragZabaki(int index){
+		zabaki[index].transform.position = Input.mousePosition;
     }
-    public void dropCepure() {
-        distancija = Vector3.Distance(cepure.transform.position, cepureVieta.transform.position);
-        if (distancija < 20){
-            cepure.transform.position = cepureVieta.transform.position;      
+	public void dropCepure(int index) {
+		distancijaCepure = Vector3.Distance(cepure[index].transform.position, cepureVieta.transform.position);
+		if (distancijaCepure < 20){
+			cepure[index].transform.position = cepureVieta.transform.position;      
         }
         else {
-            cepure.transform.position = cepureInitialPos;
+			cepure[index].transform.position = cepureInitialPos[index];
         }
     }
-    public void dropPrieksauts(){
-        distancija = Vector3.Distance(prieksauts.transform.position, prieksautsVieta.transform.position);
-        if (distancija < 20)
+	public void dropPrieksauts(int index){
+		distancijaPrieksauts = Vector3.Distance(prieksauts[index].transform.position, prieksautsVieta.transform.position);
+		if (distancijaPrieksauts < 20)
         {
-            prieksauts.transform.position = prieksautsVieta.transform.position;
+			prieksauts[index].transform.position = prieksautsVieta.transform.position;
         }
         else
         {
-            prieksauts.transform.position = prieksautsInitialPos;
+			prieksauts[index].transform.position = prieksautsInitialPos[index];
         }
     }
-    public void dropBikses(){
-        distancija = Vector3.Distance(bikses.transform.position, bikses.transform.position);
-        if (distancija < 20)
+	public void dropBikses(int index){
+		distancijaBikses = Vector3.Distance(bikses[index].transform.position, biksesVieta.transform.position);
+		if (distancijaBikses < 20)
         {
-            bikses.transform.position = biksesVieta.transform.position;
+			bikses[index].transform.position = biksesVieta.transform.position;
         }
         else
         {
-            bikses.transform.position = biksesInitialPos;
+			bikses[index].transform.position = biksesInitialPos[index];
         }
     }
-    public void dropZabaki(){
-        distancija = Vector3.Distance(zabaki.transform.position, zabakiVieta.transform.position);
-        if (distancija < 20)
+	public void dropZabaki(int index){
+		distancijaZabaki = Vector3.Distance(zabaki[index].transform.position, zabakiVieta.transform.position);
+		if (distancijaBikses < 20)
         {
-            zabaki.transform.position = zabakiVieta.transform.position;
+			zabaki[index].transform.position = zabakiVieta.transform.position;
         }
         else
         {
-            zabaki.transform.position = zabakiInitialPos;
+			zabaki[index].transform.position = zabakiInitialPos[index];
         }
     }
 }

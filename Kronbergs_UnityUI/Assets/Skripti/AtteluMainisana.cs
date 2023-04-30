@@ -7,22 +7,36 @@ public class AtteluMainisana : MonoBehaviour{
     public Sprite[] atteluMasivs;
     public GameObject mainigaisAttels;
     public GameObject tekstaLauks;
-    public GameObject helmet;
-    public GameObject armor;
-    public GameObject trousers;
-    public GameObject shoes;
+    public GameObject[] helmets;
+    public GameObject[] armors;
+    public GameObject[] trousers;
+    public GameObject[] shoes;
     public Sprite fons1;
     public Sprite fons2;
 	public GameObject fonaMaina;
     public Slider slideraIzmers1;
     public Slider slideraIzmers2;
-    private RectTransform imageRectTransform, helmetTransform, armorTransform, trousersTransform, shoesTransform;
+	private bool palidzBool = false;
+    private RectTransform imageRectTransform;
+	private RectTransform[] helmetTransform = null, armorTransform = null, trousersTransform = null, shoesTransform = null;
     void Start(){
         imageRectTransform = mainigaisAttels.GetComponent<RectTransform>();
-        helmetTransform = helmet.GetComponent<RectTransform>();
-        armorTransform = armor.GetComponent<RectTransform>();
-        trousersTransform = trousers.GetComponent<RectTransform>();
-        shoesTransform = shoes.GetComponent<RectTransform>();
+		for(int i = 0; i < armors.Length; i++) {
+			armorTransform[i] = armors[i].GetComponent<RectTransform> ();
+		}
+		for(int i = 0; i < helmets.Length; i++) {
+			helmetTransform[i] = helmets[i].GetComponent<RectTransform> ();
+		}
+		for(int i = 0; i <  trousers.Length; i++) {
+			trousersTransform[i] = trousers[i].GetComponent<RectTransform> ();
+		}
+		for(int i = 0; i < shoes.Length; i++) {
+			shoesTransform[i] = helmets[i].GetComponent<RectTransform> ();
+		}
+		Helmets(palidzBool);
+		Armors(palidzBool);
+		Leggins(palidzBool);
+		Shoes(palidzBool);
     }
     public void izkritosais(int index){
         if (index == 0){
@@ -38,18 +52,27 @@ public class AtteluMainisana : MonoBehaviour{
             tekstaLauks.GetComponent<Text>().text = "ghEghgEhgE.....Smadzenes!";
         }
      }
-    public void HelmetAttels(bool vertiba){
-        helmet.SetActive(vertiba);
-    }
-    public void ArmorAttels(bool vertiba){
-        armor.SetActive(vertiba);
-    }
-    public void TrousersAttels(bool vertiba){
-        trousers.SetActive(vertiba);
-    }
-    public void ShoesAttels(bool vertiba){
-        shoes.SetActive(vertiba);
-    }
+	public void Helmets(bool vertiba){
+		foreach (GameObject obj in helmets) {
+			obj.SetActive(vertiba);
+		}
+	}
+	public void Armors(bool vertiba){
+		foreach (GameObject obj in armors) {
+			obj.SetActive(vertiba);
+		}
+	}
+	public void Leggins(bool vertiba){
+		foreach (GameObject obj in trousers) {
+			obj.SetActive(vertiba);
+		}
+	}
+	public void Shoes(bool vertiba){
+		foreach (GameObject obj in shoes) {
+			obj.SetActive(vertiba);
+		}
+	}
+    
     public void diena() { 
 		fonaMaina.GetComponent<Image> ().sprite = fons1;
    }
@@ -59,16 +82,32 @@ public class AtteluMainisana : MonoBehaviour{
     public void mainitGarumu(){
         float pasreizejaisIzmers = slideraIzmers1.GetComponent<Slider>().value;
         mainigaisAttels.transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
-        helmet.transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
-        armor.transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
-        trousers.transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
-        shoes.transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
+		for (int i = 0; i < helmets.Length; i++) {
+			helmets[i].transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
+		}
+		for (int i = 0; i < armors.Length; i++) {
+			armors[i].transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
+		}
+		for (int i = 0; i < trousers.Length; i++) {
+			trousers[i].transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
+		}
+		for (int i = 0; i < shoes.Length; i++) {
+			shoes[i].transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
+		}
     }
     public void mainitPlatumu(){
         imageRectTransform.sizeDelta = new Vector2(slideraIzmers2.value, imageRectTransform.sizeDelta.y);
-        helmetTransform.sizeDelta = new Vector2(slideraIzmers2.value, helmetTransform.sizeDelta.y);
-        armorTransform.sizeDelta = new Vector2(slideraIzmers2.value, armorTransform.sizeDelta.y);
-        trousersTransform.sizeDelta = new Vector2(slideraIzmers2.value, trousersTransform.sizeDelta.y);
-        shoesTransform.sizeDelta = new Vector2(slideraIzmers2.value, shoesTransform.sizeDelta.y);
+		for (int i = 0; i < helmets.Length; i++) {
+			helmetTransform[i].sizeDelta = new Vector2(slideraIzmers2.value, imageRectTransform.sizeDelta.y);
+		}
+		for (int i = 0; i < armors.Length; i++) {
+			armorTransform[i].sizeDelta = new Vector2(slideraIzmers2.value, imageRectTransform.sizeDelta.y);
+		}
+		for (int i = 0; i < trousers.Length; i++) {
+			trousersTransform[i].sizeDelta = new Vector2(slideraIzmers2.value, imageRectTransform.sizeDelta.y);
+		}
+		for (int i = 0; i < shoes.Length; i++) {
+			shoesTransform[i].sizeDelta = new Vector2(slideraIzmers2.value, imageRectTransform.sizeDelta.y);
+		}
     }
 }
