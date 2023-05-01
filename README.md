@@ -8,8 +8,8 @@ Projekts - Spēle, kurš realizē pārģērbšanas ideju Minecraft spēlē 🧺<
 - [x] Izveidot iespēju ievadīt vienā laukā varoņa vārdu un otrā viņa vecumu (tikai skaitļi), kā arī izveidot pogu, kura drūka ievadīto informāciju vienā, īsā teikumā
 - [x] Izveidot iespēju mainīt varoni (vismāz 2)
 - [x] Ir izveidota iespēja mainīt režīmu gaišais/tumšais
-- [ ] Pārvietojot objektus (apģerbu), izveidot iespēju, ka lietotājs var mainīt tam krāsu, uzbraucot uz kāda no krāsas spainim
+- [x] Realizēta iespēja pārģērbt varoni izmantojot Drag/Drop funkcionalitāti
 - [x] Izveidot iespēju mainīt varoņa augstumu un platumu, un tās automātiski mainās apgērba izmērs
 - [x] Izveidot nelielu aprakstu par katru no varoņiem
 - [x] Izveidot otro ainu (sākuma ekrāns)
-- [ ] Projekts gatavs parādīšanai!
+- [x] Projekts gatavs parādīšanai!
