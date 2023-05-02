@@ -1,0 +1,46 @@
+Initialize engine version: 5.5.6f1 (3fb31a95adee)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics 600 (ID=0x3185)
+    Vendor:   Intel
+    VRAM:     1109 MB
+    Driver:   26.20.100.7925
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.059 seconds
+Platform assembly: C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.422900 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 8.655000 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 759.
+Total: 0.960600 ms (FindLiveObjects: 0.121700 ms CreateObjectMapping: 0.034100 ms MarkObjects: 0.774000 ms  DeleteObjects: 0.029300 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at AttelaVieta.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.031900 ms
+
+Unloading 93 unused Assets to reduce memory usage. Loaded Objects now: 284.
+Total: 2.312100 ms (FindLiveObjects: 0.069300 ms CreateObjectMapping: 0.024200 ms MarkObjects: 0.351700 ms  DeleteObjects: 1.865500 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 13e4 -> priority: 1 
