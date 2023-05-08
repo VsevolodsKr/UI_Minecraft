@@ -17,19 +17,19 @@ Platform assembly: C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Sp�
 Loading C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.059 seconds
+- Completed reload, in  0.042 seconds
 Platform assembly: C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Vsevolods\Desktop\UI_Minecraft\Kronbergs_UnityUI\Spēle_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.422900 ms
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 8.655000 ms
+UnloadTime: 1.733400 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.295600 ms
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 759.
-Total: 0.960600 ms (FindLiveObjects: 0.121700 ms CreateObjectMapping: 0.034100 ms MarkObjects: 0.774000 ms  DeleteObjects: 0.029300 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 779.
+Total: 7.149900 ms (FindLiveObjects: 0.349200 ms CreateObjectMapping: 0.035200 ms MarkObjects: 1.606800 ms  DeleteObjects: 5.157000 ms)
 
 NullReferenceException: Object reference not set to an instance of an object
   at AttelaVieta.Start () [0x00000] in <filename unknown>:0 
@@ -37,10 +37,10 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename:  Line: -1)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.031900 ms
+UnloadTime: 5.765700 ms
 
-Unloading 93 unused Assets to reduce memory usage. Loaded Objects now: 284.
-Total: 2.312100 ms (FindLiveObjects: 0.069300 ms CreateObjectMapping: 0.024200 ms MarkObjects: 0.351700 ms  DeleteObjects: 1.865500 ms)
+Unloading 93 unused Assets to reduce memory usage. Loaded Objects now: 292.
+Total: 2.413400 ms (FindLiveObjects: 0.074200 ms CreateObjectMapping: 0.023900 ms MarkObjects: 0.337600 ms  DeleteObjects: 1.976000 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 13e4 -> priority: 1 
+  Thread -> id: 6eb8 -> priority: 1 
